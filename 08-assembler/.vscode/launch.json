@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: main",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "program": "main.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

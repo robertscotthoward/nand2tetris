@@ -1,0 +1,10 @@
+(LOOP)
+@R0
+@42
+@variable_name
+(END)
+@123
+@counter
+(MAIN)
+@i
+@100

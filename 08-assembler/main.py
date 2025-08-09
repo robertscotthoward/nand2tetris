@@ -3,7 +3,6 @@ For each *.asm file in the code folder, assemble it into a *.hack file in the pa
 """
 import re
 import os
-from tools import *
 
 
 # Define the C-instruction patterns.
@@ -59,6 +58,20 @@ THAT,4
 """.strip()
 
 SYMBOLS = [line.strip().split(",") for line in SYMBOLS.split("\n")]
+
+
+
+
+def readText(file):
+    with open(file, "r") as f:
+        return f.read()
+
+def writeText(file, text):
+    with open(file, "w") as f:
+        f.write(text)
+
+
+
 
 def assembleText(text):
     symbolTable = {}

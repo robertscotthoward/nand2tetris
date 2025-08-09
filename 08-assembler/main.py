@@ -150,7 +150,7 @@ def assembleText(text):
 
         raise Exception(f"Unknown instruction: {line}")
 
-    # Undefined labels become instance variables and are defined in order as they appear from MEM[16].
+    # Undefined labels become instant variables and are defined in order as they appear from MEM[16].
     var = 16
     for k,v in symbolTable.copy().items():
         if k.startswith('FORWARD_'):

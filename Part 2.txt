@@ -1,0 +1,68 @@
+Nand2Tetris Part 2
+
+https://www.youtube.com/watch?v=GE8X15K7ReI&list=PLrDd_kMiAuNmllp9vuPqCuttC1XL9VyVh&index=0
+
+PROJECT 7 - Build a basic VM translator.
+  python translate.py BasicText.vm
+    --> BasicText.asm
+PROJECT 8 - Extend the basic VM translator.
+
+--------------------------------------------------------------------------------
+VM is a stack machine
+
+Arithmetic/Logic
+Memory Segments
+Branching
+Function
+
+Memory Segments
+  SP = RAM[0]
+  LCL = RAM[1]
+  ARG = RAM[2]
+  THIS = RAM[3]
+  THAT = RAM[4]
+  Stack - starts at RAM[256]
+  Argument
+  Local
+  Static/Global
+  Constant
+  This
+  That
+  Pointer
+  Temp
+
+ms = {}
+ms['SP'] = {
+  'base': 256,
+  'SP': 0
+}
+
+push segment i, pop segment i, top
+add, sub, neg, eq, get, lt, and, or, not, xor ((A OR B) AND (NOT (A AND B)))
+label L, goto L, if-goto L
+function F(args, ...)
+--> function F N
+  where N is the number of variables
+  function state
+
+Compiler
+Staic
+
+
+Jack Language and VM Translator
+
+SP = 17 means put *SP = 17; SP++
+  @17
+  D=A
+  @SP
+  A=M
+  M=D
+  @SP
+  M=M+1
+  
+push x
+  *SP = x; SP++
+  
+push constant i
+  push i
+  
